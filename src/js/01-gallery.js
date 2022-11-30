@@ -28,6 +28,7 @@ function createGalleryMarkup(galleryItems) {
 
         >
           <img
+            loading="lazy"
             class="gallery__image"
             src="${preview}"
             alt="${description}"
@@ -36,3 +37,5 @@ function createGalleryMarkup(galleryItems) {
         </a>
     `).join('');
 }
+
+
