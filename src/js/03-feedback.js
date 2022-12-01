@@ -16,7 +16,7 @@ populateForm();
 function onFormInput(e) {
   const savedText = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
-  const text = savedText ? { ...savedText } : {};
+  const text = savedText ? { ...savedText } : { email: '', message: '' };
 
   text[`${e.target.name}`] = e.target.value;
 
