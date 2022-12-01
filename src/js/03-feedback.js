@@ -18,15 +18,9 @@ function onFormInput(e) {
 
   const text = savedText ? { ...savedText } : {};
 
-  if (e.target.name === 'email') {
-    text.email = e.target.value;
-  }
+  text[`${e.target.name}`] = e.target.value;
 
-  if (e.target.name === 'message') {
-    text.message = e.target.value;
-  }
-
-  console.log(text);
+  //   console.log(text);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(text));
 }
 
